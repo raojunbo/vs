@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* 通配符（权重0） < 标签选择器（权重1） < 类选择器(权重10) < id 选择器(权重100)* <important（1000）/
+        * {
+            font-size: 40px;
+            color: royalblue;
+        }
+        /* 标签选中器 */
+        div {
+            color: green;
+        }
+        /* 类选中器 */
+        .test {
+            color: royalblue;
+        }
+        #main{
+            color: red;
+        }
+
+        /* 复合选择器 */
+        div#main {
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    <div>测试优先级</div>
+    <div class="test">我是测试</div>
+    <div id="main" class="test">我是测试2</div>
+</body>
+</html>

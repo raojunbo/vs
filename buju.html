@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css布局</title>
+    <style>
+        #main {
+            width: 400px;
+            height: 200px;
+            background-color: red;
+        }
+        .test1 {
+            background-color: green;
+            /* 任何一种标签，只要脱离标准流，会被强制转化成行内块级标签*/
+            width: 100px;
+            float: left;
+        }
+        .test2 {
+            background-color: blue;
+            float:right;
+        }
+        .test3 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 脱离标准流 -->
+    <div id="main">
+        <div class="test1">1</div>
+        <div class="test2">2</div>
+        <div class="test3">3</div>
+    </div>
+</body>
+</html>

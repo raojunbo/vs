@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 所谓的选中器，就是一些针对节点的统一样式 */
+        /* 标签选中器 */
+        div {
+            color: red;
+        }
+        p {
+            color: blue;
+        }
+        /* class选择器 */
+        .test1 {
+            color: yellow;
+        }
+        /* ID选中器 */
+        #main {
+            color: violet;
+        }
+
+        /* 并列选择器 */
+        #main,.test1 {
+            background-color: tomato;
+        }
+
+        /* 复合选择器 */
+        p.test1 {
+            font-size: 69px;
+        }
+        /* 后代选择器, test1类里的 a */
+        .test1 a {
+            background-color: blue;
+        }
+        /* 直接后代选择器 */
+        .test2>p {
+            background-color: chartreuse;
+        }
+        /* 相连选择器 */
+
+        /* 属性选择器 */
+        p[name][age] {
+            color:red;
+        }
+        p[name="jack"] {
+            font-size: 20px;
+        }
+        /* 伪类 示例：在某些已经选择的标签在某种行为时的样式*/
+        input:focus {
+            outline: none;
+        }
+        #main:hover {
+            width: 100;
+            height: 100;
+            background-color: green;
+        }
+        /* 伪元素 (示例：在已经选择的某类标签的做一些改变)*/
+        p[age]:before {
+            content:url("https://dss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=3339202615,3879308162&fm=85&app=92&f=PNG?w=121&h=75&s=67B06C6CF98ECD74462BAF0F020060DD");
+        }
+    </style>
+</head>
+<body>
+    <div class="test1">我是div</div>
+    <div>我是div</div>  
+    <div>我是div</div> 
+    <div>我是div</div>  
+     <p>我是div</p>
+     <p class="test1">我是div</p>
+     <p id="main">我是div</p>
+     <div class="test1">
+        <a href="http://www.baidu.com">我是超链接</a>
+     </div>
+     <br>
+     <div class="test2">
+         我是div
+        <p>我是段落1</p>
+        <div>我是div
+            <p>我段落2</p>
+        </div>
+     </div>
+     <div>我是div
+         <p name="jack" age="20">我是带属性的标签</p>
+     </div>
+     <input placeholder="我是输入框">
+
+</body>
+</html>

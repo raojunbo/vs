@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 脱离标准流 */
+        /* 父控件必须先设置为relative */
+        #main {
+            background-color: red;
+            width: 400;
+            height: 200px;
+            /* 我是相对定位 */
+            position: relative;
+        }
+        .test1 {
+            background-color: blue;
+            /* 我是绝对定位 */
+            position: absolute;
+            left: 20px;
+            top: 30px;
+        }
+        .test2 {
+            background-color: brown;
+            /* 停留在流浪器底部 */
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id = "main">
+        <div class="test1">
+            相对父控件进行定位
+        </div>
+    </div>
+    <div class="test2">相对流浪器定位</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+
+/* 指定本页的样式 */
+/* 选中div即这是标签选择器 */
+div {
+    color: red;
+    font-size: large;
+    border: purple 4px solid;
+    
+}
+p {
+    color: blue;
+}
